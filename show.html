@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/product-page.css" />
+		<link rel="stylesheet" href="css/reset.css" />
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<title></title>
+	</head>
+
+	<body>
+		<img src="img/portrait.jpg" alt="handsome" class="blur" onclick="hideBuyNow()" />
+		<div class="share_buy">
+			<div class="half_left">
+				<img class="share_portrait" src="img/portrait.jpg" alt="头像"></img>
+				<dl class="share_content">
+					<dt><p>分享者</p></dt>
+					<dd>100%好评率</dd>
+				</dl>
+			</div>
+			<div class="half_right">
+				<button class="btn_add_to_cart">加入购物车</button>
+				<button class="btn_buy_now" onclick="buynow()">立即购买</button>
+			</div>
+		</div>
+		<div class="tab_buy_now">
+			<div class="buy_now_goods">
+				<img class="btn_cancle_buy_now" src="img/cancel.jpg" alt="退出" onclick="hideBuyNow()"></img>
+				<img class="buy_now_goods_img" src="img/portrait.jpg" alt="商品" />
+				<dl class="buy_now_goods_dl">
+					<dt><p>暴走大王，有价无市</p></dt>
+					<dd>
+						<p>¥888888.88</p>
+					</dd>
+				</dl>
+			</div>
+			<div class="options">
+				<div class="buy_now_option">
+					<p class="buy_now_option_title">颜色</p>
+					<ul>
+						<li>
+							<p class="item">1</p>
+						</li>
+						<li>
+							<p class="item">2</p>
+						</li>
+					</ul>
+					<hr />
+				</div>
+				<div class="buy_now_option">
+					<p class="buy_now_option_title">尺码</p>
+					<ul>
+						<li>
+							<p class="item">1</p>
+						</li>
+						<li>
+							<p class="item">2</p>
+						</li>
+					</ul>
+					<hr />
+				</div>
+				<div class="buy_now_option">
+					<p class="buy_now_option_title">尺码</p>
+					<ul>
+						<li>
+							<p class="item">1</p>
+						</li>
+						<li>
+							<p class="item">2</p>
+						</li>
+					</ul>
+					<hr />
+				</div>
+				<div class="buy_now_option">
+				<p class="buy_now_option_title">数量</p>
+				<div class="counts">
+					<!--<div><p class="reduction">jijfeifijejgea</p></div>-->
+					<div class="reduction"></div>
+					<div class="number"></div>	
+					<div class="add">+</div>
+				</div>
+
+			</div>
+			</div>
+				
+			
+			<div class="done">
+				<a class="btn" onclick="hideBuyNow()">确定</a>
+			</div>
+		</div>
+		<div style="clear: both;"></div>
+		<script type="text/javascript">
+			function buynow() {
+				//alert('buynow()');
+				$('img.blur').css('-webkit-filter', 'blur(3px)');
+				$(".tab_buy_now").css('display', 'block');
+			}
+
+			function hideBuyNow() {
+				$('.tab_buy_now').css('display', 'none');
+				$('img.blur').css('-webkit-filter', 'blur(0px)');
+			}
+		</script>
+	</body>
+
+</html>
